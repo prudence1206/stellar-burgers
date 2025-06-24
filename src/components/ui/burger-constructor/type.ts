@@ -1,7 +1,7 @@
-import { TConstructorState, TOrder } from '@utils-types';
+import { TOrder } from '@utils-types';
 
-export type TBurgerConstructorUI = {
-  constructorItems: TConstructorState;
+export type BurgerConstructorUIProps = {
+  constructorItems: any;
   orderRequest: boolean;
   price: number;
   orderModalData: TOrder | null;

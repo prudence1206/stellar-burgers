@@ -1,23 +1,14 @@
 import React, { FC, memo } from 'react';
 import styles from './ingredient-details.module.css';
 import { IngredientDetailsUIProps } from './type';
-import commonStyle from '@common-styles/common.module.css';
-import clsx from 'clsx';
 
 export const IngredientDetailsUI: FC<IngredientDetailsUIProps> = memo(
-  ({ ingredientData, isModal }) => {
+  ({ ingredientData }) => {
     const { name, image_large, calories, proteins, fat, carbohydrates } =
       ingredientData;
 
-    const containerStyles = clsx(styles.content, {
-      [commonStyle.paddingBlockStart]: !isModal
-    });
-
     return (
-      <div className={containerStyles}>
-        {!isModal && (
-          <h2 className='text text_type_main-large'>Детали ингредиента</h2>
-        )}
+      <div className={styles.content}>
         <img
           className={styles.img}
           alt='изображение ингредиента.'

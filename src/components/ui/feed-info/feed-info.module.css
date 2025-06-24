@@ -3,7 +3,6 @@
   justify-content: left;
   align-items: flex-start;
 }
-
 .column {
   display: inline;
   min-width: 50%;
